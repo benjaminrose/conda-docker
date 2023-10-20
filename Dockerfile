@@ -7,10 +7,10 @@ WORKDIR /pipeline
 COPY env.yaml .
 RUN mamba env create -n pipeline --file env.yaml
 
-COPY program.py startup.bash ./
-
 RUN echo "conda activate pipeline" >> ~/.bashrc
 SHELL ["/bin/bash", "--login", "-c"]
+
+COPY program.py startup.bash ./
 
 #oh, these are used with "docker run" not "docker build"
 # ENTRYPOINT ["./startup.bash"]

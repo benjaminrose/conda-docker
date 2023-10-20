@@ -5,12 +5,14 @@
 
 Build an "image": 
 ```
-docker build -t roman-sn-pipeline
+docker build -t roman-sn-pipeline.
 ```
 Note any name ( currently `roman-sn-pipeline` is used) can be given to the image.
 
 Build (and enter) container: 
-``docker run -it roman-sn-pipeline```
+```
+docker run -it roman-sn-pipeline
+```
 You need to use the same name (this example uses `roman-sn-pipeline`) as the image you want to run. This sample does not name the container, but you may want to.
 
 
